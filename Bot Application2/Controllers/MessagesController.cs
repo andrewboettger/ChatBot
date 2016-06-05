@@ -42,8 +42,11 @@ namespace Bot_Application2
             {
                 // return our reply to the user
                 
-                if (message.Intent)
-                return message.CreateReplyMessage($"You said:{message.Text}");
+                if (message.Intent == "get together")
+                return message.CreateReplyMessage($"Sure! Lets plan something!");
+                
+                else
+                return;
             }
             else
             {
