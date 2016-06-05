@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace Bot_Application2
 {
-    https://l.facebook.com/l.php?u=https%3A%2F%2Fapi.projectoxford.ai%2Fluis%2Fv1%2Fapplication%3Fid%3Ddf2b06d4-695b-4e6f-85a6-f79b8ed698d7%26subscription-key%3D9a54da9dd6e44f6081aa2eb78dece49d&h=bAQGOYMyd
+    
     [LuisModel("df2b06d4-695b-4e6f-85a6-f79b8ed698d7", "9dd6e44f6081aa2eb78dece49d")]
     [Serializable]
     [BotAuthentication]
