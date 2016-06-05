@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Net;
 using System.Collections.Generic;
@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
-using Microsoft.Bot.Connector.Utilities;
 using Newtonsoft.Json;
 
 using Microsoft.Bot.Builder.Dialogs;
@@ -46,15 +45,15 @@ namespace Bot_Application2
             {
                 // return our reply to the user
                 
-                if (message.Intent == "get together")
+                if (message.Text == "get together")
                 return message.CreateReplyMessage($"Sure! Lets plan something!");
                 
                 else
-                return;
+                    return message.CreateReplyMessage($"amen!");
             }
             else
-            {
-                return HandleSystemMessage(message);
+           {
+                return message.CreateReplyMessage($"heilfjgiedj!");
             }
         }
 
