@@ -1,0 +1,1 @@
+luis https://api.projectoxford.ai/luis/v1/application?id=df2b06d4-695b-4e6f-85a6-f79b8ed698d7&subscription-key=9a54da9dd6e44f6081aa2eb78dece49d

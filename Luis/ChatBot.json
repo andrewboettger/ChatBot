@@ -1,0 +1,197 @@
+{
+  "luis_schema_version": "1.2.0",
+  "name": "ChatBot",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "Name": "get together",
+      "Children": []
+    },
+    {
+      "Name": "None",
+      "Children": []
+    }
+  ],
+  "entities": [
+    {
+      "Name": "time",
+      "Children": []
+    },
+    {
+      "Name": "when",
+      "Children": []
+    },
+    {
+      "Name": "go",
+      "Children": []
+    },
+    {
+      "Name": "let's",
+      "Children": []
+    },
+    {
+      "Name": "day",
+      "Children": []
+    },
+    {
+      "Name": "together",
+      "Children": []
+    },
+    {
+      "Name": "where",
+      "Children": []
+    }
+  ],
+  "bing_entities": [],
+  "actions": [
+    {
+      "actionName": "get together",
+      "intentName": "get together",
+      "actionParameters": [
+        {
+          "parameterName": "let's",
+          "entityName": "let's",
+          "required": false
+        },
+        {
+          "parameterName": "together",
+          "entityName": "together",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "model_features": [
+    {
+      "name": "day",
+      "mode": true,
+      "words": "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday,today,tomorrow,day",
+      "activated": true
+    },
+    {
+      "name": "want",
+      "mode": true,
+      "words": "want,wanna",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "hey let's hang out on friday",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "hey, want to hang out?",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "let's go study at the library",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "are you free tomorrow?",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "wanna chill tomorrow?",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "we should hang out today",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "let's chill man",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "what time do you want to study?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "when are you free",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what are you doing on tuesday",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "when do you want to see inception?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where should we go",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "who wants to go skating on the lake",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "are you down to party",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "let's go to the park",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "is tomorrow good for you",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what day is good for you",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "do you want to chill today",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "today is good for me",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "let's party tomorrow",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "when do you want to party",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "yo fam ball today?",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "should we go to the park",
+      "intent": "None",
+      "entities": []
+    }
+  ]
+}
