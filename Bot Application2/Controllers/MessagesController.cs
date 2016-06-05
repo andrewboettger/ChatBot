@@ -15,7 +15,7 @@ namespace Bot_Application2
     [LuisModel("df2b06d4-695b-4e6f-85a6-f79b8ed698d7", "9dd6e44f6081aa2eb78dece49d")]
     [Serializable]
     [BotAuthentication]
-    public class MessagesController : : LuisDialog<object>
+    public class MessagesController: LuisDialog<object>
     {
         /// <summary>
         /// POST: api/Messages
