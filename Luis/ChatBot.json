@@ -9,13 +9,17 @@
       "Children": []
     },
     {
+      "Name": "available",
+      "Children": []
+    },
+    {
       "Name": "None",
       "Children": []
     }
   ],
   "entities": [
     {
-      "Name": "time",
+      "Name": "availability",
       "Children": []
     },
     {
@@ -23,41 +27,53 @@
       "Children": []
     },
     {
-      "Name": "go",
-      "Children": []
-    },
-    {
-      "Name": "let's",
-      "Children": []
-    },
-    {
-      "Name": "day",
-      "Children": []
-    },
-    {
-      "Name": "together",
-      "Children": []
-    },
-    {
       "Name": "where",
+      "Children": []
+    },
+    {
+      "Name": "what",
       "Children": []
     }
   ],
-  "bing_entities": [],
+  "bing_entities": [
+    "geography",
+    "datetime"
+  ],
   "actions": [
+    {
+      "actionName": "available",
+      "intentName": "available",
+      "actionParameters": [
+        {
+          "parameterName": "time",
+          "entityName": "datetime",
+          "required": false
+        },
+        {
+          "parameterName": "when",
+          "entityName": "when",
+          "required": false
+        }
+      ]
+    },
     {
       "actionName": "get together",
       "intentName": "get together",
       "actionParameters": [
         {
-          "parameterName": "let's",
-          "entityName": "let's",
-          "required": false
+          "parameterName": "when",
+          "entityName": "when",
+          "required": true
         },
         {
-          "parameterName": "together",
-          "entityName": "together",
-          "required": false
+          "parameterName": "where",
+          "entityName": "where",
+          "required": true
+        },
+        {
+          "parameterName": "what",
+          "entityName": "what",
+          "required": true
         }
       ]
     }
@@ -74,9 +90,21 @@
       "mode": true,
       "words": "want,wanna",
       "activated": true
+    },
+    {
+      "name": "what",
+      "mode": true,
+      "words": "hang out,hang,get together,chill",
+      "activated": true
     }
   ],
-  "regex_features": [],
+  "regex_features": [
+    {
+      "name": "ish",
+      "pattern": "ish",
+      "activated": false
+    }
+  ],
   "utterances": [
     {
       "text": "hey let's hang out on friday",
@@ -151,7 +179,13 @@
     {
       "text": "let's go to the park",
       "intent": "get together",
-      "entities": []
+      "entities": [
+        {
+          "entity": "where",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
     },
     {
       "text": "is tomorrow good for you",
@@ -192,6 +226,233 @@
       "text": "should we go to the park",
       "intent": "None",
       "entities": []
+    },
+    {
+      "text": "do you want to chill tomorrow",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "when",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "party at my house tomorrow",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "where",
+          "startPos": 2,
+          "endPos": 3
+        },
+        {
+          "entity": "what",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "let's go study at dc tomorrow",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "when",
+          "startPos": 7,
+          "endPos": 7
+        },
+        {
+          "entity": "where",
+          "startPos": 6,
+          "endPos": 6
+        },
+        {
+          "entity": "what",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "who wants to see a movie at 6",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "what",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "come over at 5",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "i am available from 5 to 9 tomorrow",
+      "intent": "available",
+      "entities": []
+    },
+    {
+      "text": "i'm free today",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i can't come",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 1,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "i can come after 9",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "no i'm busy tomorrow",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "yeah i can come",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "i'm working all week",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "when",
+          "startPos": 4,
+          "endPos": 5
+        },
+        {
+          "entity": "availability",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "are you guys down to hang out tomorrow",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "what",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "nah, i'm away until next tuesday",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "are you guys free to come over tonight?",
+      "intent": "get together",
+      "entities": []
+    },
+    {
+      "text": "let's travel to montreal",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "where",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "what",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i'm busy from 8 to midnight",
+      "intent": "available",
+      "entities": [
+        {
+          "entity": "availability",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "are you guys down to hang out today at the park",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "what",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "let's go to the park tomorrow",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "where",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "are you guys down to hang out",
+      "intent": "get together",
+      "entities": [
+        {
+          "entity": "what",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
     }
   ]
 }
